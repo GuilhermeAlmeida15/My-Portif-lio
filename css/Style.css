@@ -1,4 +1,7 @@
 /* CSS (styles.css) */
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -308,8 +311,55 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      justify-content: center;
+      align-items: center;
       
     }
+
+    .introduction {
+      font-size: 20px;
+      padding: 15px;
+      margin-bottom: 80px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contatos{
+      display: flex;
+    }
+    .contatos a {
+      margin: 50px;
+      background: #041142;
+      padding: 10px 30px 12px;
+      border-radius: 10px;
+      transition: 0.5s;
+      border: 1px solid;
+      text-decoration: none;
+      color: #f2f2f2;
+    }
+
+    .contatos a:hover{
+      background-color: #080c1c;
+      border-color: #00ffb3;
+      color: #f2f2f2;
+    }
+
+    .contatos img{
+      width: 100px;
+      height: 100px;
+      border-radius: 90%;
+      size: cover;
+      margin-top: 20px;
+      box-shadow: 1px 1px 15px #77ffd3;
+    }
+
+
+
+
+
+
+
+
 
     /* responsividade */
     @media (max-width: 500px) {
