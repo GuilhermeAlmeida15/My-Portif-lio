@@ -9,7 +9,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #080c1c;
     color: #f2f2f2;
-    
   }
   header {
     display: flex;
@@ -57,6 +56,7 @@
   }
   .links {
     margin-top: 2rem;
+    
   }
   .links a {
     margin-right: 3rem;
@@ -64,8 +64,17 @@
     text-decoration: none;
     border-bottom: 1px solid transparent;
     background-color: #f2f2f2;
+    border: 2px solid transparent;
+    cursor: pointer;
     border-radius: 5px;
     padding: 5px;
+    transition: 0.5s;
+  }
+
+  .links a:hover{
+    background-color: #080c1c;
+    border-color: #f2f2f2;
+    color: #f2f2f2;
   }
   /* .links a:hover {
     
@@ -75,6 +84,7 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+    
   }
   .profile-pic {
     width: 300px;
@@ -82,7 +92,12 @@
     border-radius: 90%;
     background-image: url(/imagens.img/eu2.jpg);
     background-size: cover;
+    box-shadow: 1px 2px 15px #f2f2f2;
+    transition: transform 0.3s ease;
+  }
 
+  .profile-pic:hover {
+    transform: scale(1.1);
   }
   /* .timeline {
     position: absolute;
@@ -109,7 +124,11 @@
   /* About-Section */
   .section-title {
     padding: 50px;
-
+    font-size: 35px;
+    background: linear-gradient(90deg, #43EA80, #08F8D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   .about-section{
     text-align: center;
@@ -143,12 +162,17 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: transform 0.3s ease;
   }
 
   .logo img {
     max-width: 100px;
     max-height: 60px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .logo:hover{
+    transform: scale(1.3);
   }
 
   @keyframes scroll {
@@ -159,8 +183,149 @@
       transform: translateX(-50%);
     }
   }
+    /* section-projects */
 
+    .title {
+      padding: 50px;
+      font-size: 35px;
+      background: linear-gradient(90deg, #43EA80, #08F8D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   
+    .project-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cards-conteiner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+      padding:  40px 20px;
+    }
+    
+    .arrow {
+      display: inline-block;
+      margin-left: 10px;
+      transition: transform 0.4s ease;
+      color: #333;
+      font-size: 1rem;
+    }
+    
+    .card.expandido .arrow {
+      transform: rotate(180deg);
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 350px;
+      transition: transform 0.6s ease,box-shadow 0.8s ease, max-height 0.6s ease;
+      max-height: 450px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    /* hover */
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+      /* Conteúdo do card */
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+      transition: padding 0.4 ease;
+    }
+
+
+    .card-content h2 {
+      font-size: 1.6em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* descrição oculta */
+    .descricao{
+      display: none;
+      font-size: 1em;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 15px;
+      padding: 12px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      min-height: 80px;
+      text-align: left;
+    }
+
+    /* expandido */
+    .card.expandido {
+      transform: scale(1.03);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      max-height: 900px;
+    }
+
+    .card.expandido img {
+      transform: scale(1.05);
+    }
+
+    .card.expandido .descricao {
+      display: block;
+      opacity: 1;
+      max-height: 400px;
+      margin-top: 15px;
+    }
+
+    /* Section Contacts */
+    .Section-Contact {
+      text-align: center;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-title {
+      padding: 50px;
+      font-size: 35px;
+      background: linear-gradient(90deg, #43EA80, #08F8D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      
+    }
+
+    /* responsividade */
+    @media (max-width: 500px) {
+      .card {
+        max-width: 90%;
+      }
+    
+      .card-content h2 {
+        font-size: 1.3em;
+      }
+    
+      .descricao {
+        font-size: 0.95em;
+      }
+    }
+
 
   
   
