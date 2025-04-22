@@ -362,50 +362,94 @@ html {
 
 
     /* responsividade */
-   /* Ajustes para telas até 900px */
-@media (max-width: 900px) {
-  .container {
+ /* Ajustes para telas até 600px */
+@media (max-width: 600px) {
+  header {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    text-align: center;
+    gap: 1rem;
   }
 
-  .intro {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .links a {
+    margin: 0.5rem 0.5rem;
+    padding: 8px 12px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-title, .title, .contact-title {
+    font-size: 28px;
+    padding: 30px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .cards-conteiner {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .card {
     max-width: 100%;
-  }
-
-  .profile-container {
-    width: 100%;
-    margin-top: 2rem;
+    margin-bottom: 20px;
   }
 
   .slider {
-    width: 90%;
-    height: 80px;
-  }
-
-  .slide-track {
-    width: calc(120px * 14);
-  }
-
-  .logo {
-    width: 120px;
     height: 70px;
   }
 
+  .slide-track {
+    width: calc(100px * 14);
+  }
+
+  .logo {
+    width: 100px;
+    height: 60px;
+  }
+
   .logo img {
-    max-width: 80px;
+    max-width: 70px;
+  }
+
+  .introduction {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .contatos img {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
   }
 
   .contatos {
     flex-direction: column;
+    align-items: center;
   }
 
   .contatos a {
-    margin: 10px 0;
+    padding: 8px 20px;
   }
 }
+
 
 
   
