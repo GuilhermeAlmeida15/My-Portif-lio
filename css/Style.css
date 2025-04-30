@@ -95,7 +95,7 @@ html {
     border-radius: 90%;
     background-image: url(/imagens.img/eu2.jpg);
     background-size: cover;
-    box-shadow: 1px 2px 15px #f2f2f2;
+    box-shadow: 1px 1px 15px #77ffd3;
     transition: transform 0.3s ease;
   }
 
